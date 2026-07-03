@@ -21,3 +21,20 @@ non-standard code can sometimes still be read by a human or mapped later
 from fhir_validator import REQUIRED_FIELDS, CODEABLE_FIELD
 
 
+def score_bundle(bundle, validation_results):
+    """
+    validation_results: list of dicts from fhir_validator.validate_bundle()
+    Returns a dict with completeness_score, standard_coding_score,
+    overall_score, and raw counts, for one patient bundle.
+    """
+    total_required_fields = 0
+    missing_required_fields = 0
+    total_codeable_fields = 0
+    non_standard_codeable_fields = 0
+    broken_references = 0
+
+    for result in validation_results:
+        rtype = result["resourceType"]
+        total_required_fields += len(REQUIRED_FIELDS.get(rtype, []))
+        missing_required_fields += len(result["missing_fields"])
+
