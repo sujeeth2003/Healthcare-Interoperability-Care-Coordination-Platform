@@ -79,3 +79,19 @@ def make_patient():
         del resource[field_to_drop]
     return resource
 
+
+def make_condition(patient_id):
+    code, display = random.choice(SNOMED_CONDITIONS)
+    resource = {
+        "resourceType": "Condition",
+        "id": str(uuid.uuid4()),
+        "subject": {"reference": f"Patient/{patient_id}"},
+        "clinicalStatus": {"coding": [{"system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                                        "code": "active"}]},
+        "code": {"coding": [{"system": "http://snomed.info/sct", "code": code, "display": display}]},
+    }
+    if random.random() < DEFECT_RATE:
+        # replace the standard coded concept with free text (loses machine-readability)
+        resource["code"] = {"text": display}
+    return resource
+
