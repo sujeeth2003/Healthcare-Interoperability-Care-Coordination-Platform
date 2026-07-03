@@ -32,3 +32,11 @@ REQUIRED_FIELDS = {
                  "category", "activity"],
 }
 
+# Which field on each resource type carries the clinically coded concept
+CODEABLE_FIELD = {
+    "Condition": "code",
+    "Observation": "code",
+    "MedicationRequest": "medicationCodeableConcept",
+}
+
+
