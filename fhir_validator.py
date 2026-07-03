@@ -74,3 +74,17 @@ def check_standard_coding(resource):
     return problems
 
 
+def check_reference_integrity(resource, valid_patient_ids):
+    """
+    Checks that resource['subject']['reference'] (format 'Patient/<id>')
+    points at a Patient ID that actually exists in the dataset.
+    """
+    subject = resource.get("subject")
+    if not subject or "reference" not in subject:
+        return []  # already caught as a missing required field elsewhere
+    ref = subject["reference"]
+    ref_id = ref.split("/")[-1] if "/" in ref else ref
+    if ref_id not in valid_patient_ids:
+        return [f"subject.reference points to non-existent Patient id '{ref_id}'"]
+    return []
+
