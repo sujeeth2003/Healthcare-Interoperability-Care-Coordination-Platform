@@ -132,3 +132,22 @@ def make_medication_request(patient_id):
         resource["medicationCodeableConcept"] = {"text": display}
     return resource
 
+
+def make_care_plan(patient_id, providers):
+    resource = {
+        "resourceType": "CarePlan",
+        "id": str(uuid.uuid4()),
+        "status": "active",
+        "intent": "plan",
+        "subject": {"reference": f"Patient/{patient_id}"},
+        "category": [{"coding": [{"system": "http://hl7.org/fhir/us/core/CodeSystem/careplan-category",
+                                   "code": "assess-plan"}]}],
+        "activity": [{"detail": {"description": "Follow up visit in 3 months"}},
+                     {"detail": {"description": "Home blood pressure monitoring"}}],
+        "careTeam": providers,
+    }
+    if random.random() < DEFECT_RATE:
+        field_to_drop = random.choice(["category", "activity"])
+        del resource[field_to_drop]
+    return resource
+
