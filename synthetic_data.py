@@ -58,3 +58,24 @@ PROVIDER_ROLES = ["Primary Care Physician", "Cardiologist", "Endocrinologist",
 DEFECT_RATE = 0.30  # fraction of resources that get a deliberate defect
 
 
+def _random_dob():
+    days = random.randint(0, 365 * 90)
+    return (date(2024, 1, 1) - timedelta(days=days)).isoformat()
+
+
+def make_patient():
+    pid = str(uuid.uuid4())
+    resource = {
+        "resourceType": "Patient",
+        "id": pid,
+        "identifier": [{"system": "urn:oid:MRN", "value": f"MRN{random.randint(100000,999999)}"}],
+        "name": [{"family": random.choice(LAST_NAMES), "given": [random.choice(FIRST_NAMES)]}],
+        "gender": random.choice(GENDERS),
+        "birthDate": _random_dob(),
+    }
+    if random.random() < DEFECT_RATE:
+        # drop a required field entirely, simulating an incomplete export
+        field_to_drop = random.choice(["gender", "birthDate", "identifier"])
+        del resource[field_to_drop]
+    return resource
+
