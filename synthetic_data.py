@@ -95,3 +95,24 @@ def make_condition(patient_id):
         resource["code"] = {"text": display}
     return resource
 
+
+def make_observation(patient_id):
+    code, display, unit = random.choice(LOINC_OBSERVATIONS)
+    resource = {
+        "resourceType": "Observation",
+        "id": str(uuid.uuid4()),
+        "status": "final",
+        "code": {"coding": [{"system": "http://loinc.org", "code": code, "display": display}]},
+        "subject": {"reference": f"Patient/{patient_id}"},
+        "valueQuantity": {"value": round(random.uniform(60, 180), 1), "unit": unit},
+    }
+    if random.random() < DEFECT_RATE:
+        defect = random.choice(["drop_status", "free_text_code", "broken_reference"])
+        if defect == "drop_status":
+            del resource["status"]
+        elif defect == "free_text_code":
+            resource["code"] = {"text": display}
+        elif defect == "broken_reference":
+            resource["subject"] = {"reference": f"Patient/{uuid.uuid4()}"}  # points to nobody
+    return resource
+
