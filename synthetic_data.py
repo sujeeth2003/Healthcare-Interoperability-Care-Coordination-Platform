@@ -52,3 +52,9 @@ RXNORM_MEDICATIONS = [
     ("745679", "Albuterol 90 MCG inhaler"),
 ]
 
+PROVIDER_ROLES = ["Primary Care Physician", "Cardiologist", "Endocrinologist",
+                  "Care Coordinator", "Pharmacist"]
+
+DEFECT_RATE = 0.30  # fraction of resources that get a deliberate defect
+
+
