@@ -67,3 +67,10 @@ def check_standard_coding(resource):
         problems.append(f"{field_name}: no standard coding present (free text only)")
         return problems
 
+    for coding in codings:
+        system = coding.get("system")
+        if system not in STANDARD_CODE_SYSTEMS:
+            problems.append(f"{field_name}: non-standard or missing code system '{system}'")
+    return problems
+
+
