@@ -88,3 +88,17 @@ def check_reference_integrity(resource, valid_patient_ids):
         return [f"subject.reference points to non-existent Patient id '{ref_id}'"]
     return []
 
+
+def validate_resource(resource, valid_patient_ids):
+    """
+    Runs all checks on a single resource.
+    Returns a dict: {resourceType, id, missing_fields, coding_problems, reference_problems}
+    """
+    return {
+        "resourceType": resource.get("resourceType"),
+        "id": resource.get("id"),
+        "missing_fields": check_required_fields(resource),
+        "coding_problems": check_standard_coding(resource),
+        "reference_problems": check_reference_integrity(resource, valid_patient_ids),
+    }
+
