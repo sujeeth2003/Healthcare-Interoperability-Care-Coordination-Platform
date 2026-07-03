@@ -35,3 +35,20 @@ LOINC_OBSERVATIONS = [
     ("4548-4", "Hemoglobin A1c", "%"),
 ]
 
+# Real SNOMED CT codes for common chronic conditions
+SNOMED_CONDITIONS = [
+    ("44054006", "Type 2 diabetes mellitus"),
+    ("38341003", "Hypertension"),
+    ("195967001", "Asthma"),
+    ("13645005", "Chronic obstructive pulmonary disease"),
+    ("84114007", "Heart failure"),
+]
+
+# Real RxNorm codes for common medications
+RXNORM_MEDICATIONS = [
+    ("860975", "Metformin 500 MG"),
+    ("197361", "Lisinopril 10 MG"),
+    ("308136", "Atorvastatin 20 MG"),
+    ("745679", "Albuterol 90 MCG inhaler"),
+]
+
