@@ -47,3 +47,23 @@ def check_required_fields(resource):
     return [f for f in required if f not in resource]
 
 
+def check_standard_coding(resource):
+    """
+    Returns a list of problems with coded fields:
+    - 'no_coding' if the field only has free-text ('text') with no 'coding' array
+    - 'non_standard_system' if a coding entry's 'system' isn't in STANDARD_CODE_SYSTEMS
+    Returns [] if the resource type has no codeable field, or the field is
+    missing entirely (that's already reported by check_required_fields).
+    """
+    rtype = resource.get("resourceType")
+    field_name = CODEABLE_FIELD.get(rtype)
+    if not field_name or field_name not in resource:
+        return []
+
+    field = resource[field_name]
+    problems = []
+    codings = field.get("coding")
+    if not codings:
+        problems.append(f"{field_name}: no standard coding present (free text only)")
+        return problems
+
