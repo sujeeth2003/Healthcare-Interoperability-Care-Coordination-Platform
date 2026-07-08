@@ -13,3 +13,18 @@ from synthetic_data import generate_dataset
 from fhir_validator import validate_bundle
 from interop_score import score_dataset
 
+
+def build_report(num_patients=25):
+    bundles = generate_dataset(num_patients=num_patients)
+    valid_patient_ids = {b["patient"]["id"] for b in bundles if "id" in b["patient"]}
+
+    all_validation_results = [validate_bundle(b, valid_patient_ids) for b in bundles]
+    per_patient_scores, dataset_summary = score_dataset(bundles, all_validation_results)
+
+    # Attach human-readable display info (name, providers, meds, goals) for the dashboard
+    display_rows = []
+    for bundle, results, score in zip(bundles, all_validation_results, per_patient_scores):
+        patient = bundle["patient"]
+        name_parts = patient.get("name", [{}])[0]
+        full_name = " ".join(name_parts.get("given", ["(no given name)"])) + " " + name_parts.get("family", "(no family name)")
+
