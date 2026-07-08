@@ -28,3 +28,18 @@ def build_report(num_patients=25):
         name_parts = patient.get("name", [{}])[0]
         full_name = " ".join(name_parts.get("given", ["(no given name)"])) + " " + name_parts.get("family", "(no family name)")
 
+        medication_names = []
+        for m in bundle["medications"]:
+            med = m.get("medicationCodeableConcept", {})
+            codings = med.get("coding")
+            medication_names.append(codings[0]["display"] if codings else med.get("text", "(unspecified)"))
+
+        condition_names = []
+        for c in bundle["conditions"]:
+            code = c.get("code", {})
+            codings = code.get("coding")
+            condition_names.append(codings[0]["display"] if codings else code.get("text", "(unspecified)"))
+
+        providers = bundle["care_plan"].get("careTeam", [])
+        activities = [a["detail"]["description"] for a in bundle["care_plan"].get("activity", [])]
+
