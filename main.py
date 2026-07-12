@@ -59,3 +59,10 @@ def build_report(num_patients=25):
             "error_count": error_count,
         })
 
+    report = {
+        "dataset_summary": dataset_summary,
+        "patients": display_rows,
+    }
+    return report
+
+
