@@ -123,3 +123,25 @@ def render_dashboard(report, output_path="dashboard.html"):
   <tbody></tbody>
 </table>
 
+<script>
+const report = __DATA_JSON__;
+
+function scoreClass(score) {
+  if (score >= 85) return "score-good";
+  if (score >= 60) return "score-mid";
+  return "score-bad";
+}
+
+// --- Summary cards ---
+const s = report.dataset_summary;
+const summaryGrid = document.getElementById("summaryGrid");
+const cards = [
+  ["Patients in dataset", s.patient_count, ""],
+  ["Avg. overall score", s.avg_overall_score + "%", ""],
+  ["Missing required fields (total)", s.total_missing_fields, ""],
+  ["Non-standard codings (total)", s.total_non_standard_codings, ""],
+];
+summaryGrid.innerHTML = cards.map(c =>
+  `<div class="card"><div class="value">${c[1]}</div><div class="label">${c[0]}</div></div>`
+).join("");
+
