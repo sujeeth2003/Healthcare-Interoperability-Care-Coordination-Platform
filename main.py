@@ -166,3 +166,20 @@ new Chart(ctx1, {
   }
 });
 
+// --- Chart 2: issue type breakdown across dataset ---
+const ctx2 = document.getElementById("issueChart").getContext("2d");
+new Chart(ctx2, {
+  type: "doughnut",
+  data: {
+    labels: ["Missing required fields", "Non-standard codings", "Broken references"],
+    datasets: [{
+      data: [s.total_missing_fields, s.total_non_standard_codings, s.total_broken_references],
+      backgroundColor: ["#cf222e", "#bf8700", "#57606a"]
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { title: { display: true, text: "Data Quality Issues by Type (Dataset-wide)" } }
+  }
+});
+
