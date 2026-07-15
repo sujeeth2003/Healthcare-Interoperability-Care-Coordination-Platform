@@ -209,7 +209,7 @@ tbody.innerHTML = report.patients.map(p => `
 
 
 if __name__ == "__main__":
-    report = build_report(num_patients=2)
+    report = build_report(num_patients=25)
 
     with open("validation_report.json", "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2)
