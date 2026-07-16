@@ -25,3 +25,30 @@
 </head>
 <body>
 
+<h1>Healthcare Interoperability & Care Coordination Dashboard</h1>
+<div class="subtitle">Synthetic FHIR R4 dataset — validated against required fields and standard terminology (LOINC / SNOMED CT / RxNorm)</div>
+
+<div class="summary-grid" id="summaryGrid"></div>
+
+<div class="charts">
+  <div class="chart-box"><canvas id="scoreChart" height="180"></canvas></div>
+  <div class="chart-box"><canvas id="issueChart" height="180"></canvas></div>
+</div>
+
+<table id="patientTable">
+  <thead>
+    <tr>
+      <th>Patient</th>
+      <th>Conditions</th>
+      <th>Medications</th>
+      <th>Care Team</th>
+      <th>Care Plan Activities</th>
+      <th>Completeness</th>
+      <th>Standard Coding</th>
+      <th>Overall Score</th>
+      <th>Issues Found</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
