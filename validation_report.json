@@ -1,0 +1,742 @@
+{
+  "dataset_summary": {
+    "avg_completeness_score": 97.8,
+    "avg_standard_coding_score": 63.0,
+    "avg_overall_score": 83.9,
+    "total_missing_fields": 26,
+    "total_non_standard_codings": 58,
+    "total_broken_references": 6,
+    "patient_count": 25
+  },
+  "patients": [
+    {
+      "patient_id": "a2f3de3b-6f1a-425e-9bb5-3f919ff279b0",
+      "name": "James Garcia",
+      "conditions": [
+        "Type 2 diabetes mellitus",
+        "Hypertension"
+      ],
+      "medications": [
+        "Metformin 500 MG",
+        "Metformin 500 MG"
+      ],
+      "providers": [
+        "Dr. Garcia (Pharmacist)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "a2f3de3b-6f1a-425e-9bb5-3f919ff279b0",
+        "completeness_score": 94.5,
+        "standard_coding_score": 62.5,
+        "overall_score": 81.7,
+        "missing_required_fields": 3,
+        "non_standard_codeable_fields": 3,
+        "broken_references": 1
+      },
+      "error_count": 7
+    },
+    {
+      "patient_id": "da0579de-580c-4782-8761-c14c8c4da643",
+      "name": "Grace Smith",
+      "conditions": [
+        "Heart failure",
+        "Type 2 diabetes mellitus"
+      ],
+      "medications": [
+        "Lisinopril 10 MG",
+        "Lisinopril 10 MG"
+      ],
+      "providers": [
+        "Dr. Brown (Primary Care Physician)",
+        "Dr. Kim (Endocrinologist)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "da0579de-580c-4782-8761-c14c8c4da643",
+        "completeness_score": 100.0,
+        "standard_coding_score": 66.7,
+        "overall_score": 86.7,
+        "missing_required_fields": 0,
+        "non_standard_codeable_fields": 2,
+        "broken_references": 0
+      },
+      "error_count": 2
+    },
+    {
+      "patient_id": "97fd606f-c136-482a-ba93-5562ee0d8620",
+      "name": "Maria Kim",
+      "conditions": [
+        "Type 2 diabetes mellitus"
+      ],
+      "medications": [
+        "Albuterol 90 MCG inhaler",
+        "Lisinopril 10 MG",
+        "Atorvastatin 20 MG"
+      ],
+      "providers": [
+        "Dr. Khan (Pharmacist)",
+        "Dr. Smith (Endocrinologist)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "97fd606f-c136-482a-ba93-5562ee0d8620",
+        "completeness_score": 98.0,
+        "standard_coding_score": 57.1,
+        "overall_score": 81.7,
+        "missing_required_fields": 1,
+        "non_standard_codeable_fields": 3,
+        "broken_references": 0
+      },
+      "error_count": 4
+    },
+    {
+      "patient_id": "2737ccad-2e12-4590-bff7-3daf7a806368",
+      "name": "Aisha Rossi",
+      "conditions": [
+        "Hypertension"
+      ],
+      "medications": [
+        "Atorvastatin 20 MG",
+        "Albuterol 90 MCG inhaler"
+      ],
+      "providers": [
+        "Dr. Garcia (Primary Care Physician)"
+      ],
+      "activities": [],
+      "score": {
+        "patient_id": "2737ccad-2e12-4590-bff7-3daf7a806368",
+        "completeness_score": 97.8,
+        "standard_coding_score": 50.0,
+        "overall_score": 78.7,
+        "missing_required_fields": 1,
+        "non_standard_codeable_fields": 3,
+        "broken_references": 1
+      },
+      "error_count": 5
+    },
+    {
+      "patient_id": "6197de2b-8dc8-4ee1-bce1-c348787f41f6",
+      "name": "David Chen",
+      "conditions": [
+        "Heart failure"
+      ],
+      "medications": [
+        "Metformin 500 MG"
+      ],
+      "providers": [
+        "Dr. Khan (Pharmacist)",
+        "Dr. Ali (Cardiologist)",
+        "Dr. Brown (Cardiologist)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "6197de2b-8dc8-4ee1-bce1-c348787f41f6",
+        "completeness_score": 100.0,
+        "standard_coding_score": 75.0,
+        "overall_score": 90.0,
+        "missing_required_fields": 0,
+        "non_standard_codeable_fields": 1,
+        "broken_references": 1
+      },
+      "error_count": 2
+    },
+    {
+      "patient_id": "c488d688-0968-4b9e-9fa9-4b5e1cb0c9ae",
+      "name": "Wei Brown",
+      "conditions": [
+        "Hypertension",
+        "Hypertension"
+      ],
+      "medications": [
+        "Lisinopril 10 MG",
+        "Metformin 500 MG",
+        "Metformin 500 MG"
+      ],
+      "providers": [
+        "Dr. Brown (Endocrinologist)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "c488d688-0968-4b9e-9fa9-4b5e1cb0c9ae",
+        "completeness_score": 96.4,
+        "standard_coding_score": 50.0,
+        "overall_score": 77.9,
+        "missing_required_fields": 2,
+        "non_standard_codeable_fields": 4,
+        "broken_references": 0
+      },
+      "error_count": 6
+    },
+    {
+      "patient_id": "8977a956-1ad9-45c7-8e4a-a4cd61ce6e1b",
+      "name": "Priya Kim",
+      "conditions": [
+        "Type 2 diabetes mellitus"
+      ],
+      "medications": [
+        "Lisinopril 10 MG"
+      ],
+      "providers": [
+        "Dr. Patel (Pharmacist)",
+        "Dr. Patel (Cardiologist)",
+        "Dr. Khan (Care Coordinator)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "8977a956-1ad9-45c7-8e4a-a4cd61ce6e1b",
+        "completeness_score": 100.0,
+        "standard_coding_score": 60.0,
+        "overall_score": 84.0,
+        "missing_required_fields": 0,
+        "non_standard_codeable_fields": 2,
+        "broken_references": 0
+      },
+      "error_count": 2
+    },
+    {
+      "patient_id": "ac165fbe-cae7-476d-90e8-986c1818113d",
+      "name": "Wei Rossi",
+      "conditions": [
+        "Type 2 diabetes mellitus"
+      ],
+      "medications": [
+        "Atorvastatin 20 MG",
+        "Albuterol 90 MCG inhaler"
+      ],
+      "providers": [
+        "Dr. Garcia (Pharmacist)",
+        "Dr. Kim (Primary Care Physician)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "ac165fbe-cae7-476d-90e8-986c1818113d",
+        "completeness_score": 95.0,
+        "standard_coding_score": 60.0,
+        "overall_score": 81.0,
+        "missing_required_fields": 2,
+        "non_standard_codeable_fields": 2,
+        "broken_references": 0
+      },
+      "error_count": 4
+    },
+    {
+      "patient_id": "51e0dd6c-abf4-474a-b7a5-0a44ffdbab64",
+      "name": "Mohammed Brown",
+      "conditions": [
+        "Asthma"
+      ],
+      "medications": [
+        "Metformin 500 MG"
+      ],
+      "providers": [
+        "Dr. Davis (Pharmacist)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "51e0dd6c-abf4-474a-b7a5-0a44ffdbab64",
+        "completeness_score": 95.5,
+        "standard_coding_score": 83.3,
+        "overall_score": 90.6,
+        "missing_required_fields": 2,
+        "non_standard_codeable_fields": 1,
+        "broken_references": 0
+      },
+      "error_count": 3
+    },
+    {
+      "patient_id": "243f77e6-9845-4b40-b538-619f29683e39",
+      "name": "David Nguyen",
+      "conditions": [
+        "Chronic obstructive pulmonary disease",
+        "Type 2 diabetes mellitus"
+      ],
+      "medications": [
+        "Metformin 500 MG",
+        "Atorvastatin 20 MG"
+      ],
+      "providers": [
+        "Dr. Johnson (Cardiologist)",
+        "Dr. Chen (Care Coordinator)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "243f77e6-9845-4b40-b538-619f29683e39",
+        "completeness_score": 94.5,
+        "standard_coding_score": 75.0,
+        "overall_score": 86.7,
+        "missing_required_fields": 3,
+        "non_standard_codeable_fields": 2,
+        "broken_references": 0
+      },
+      "error_count": 5
+    },
+    {
+      "patient_id": "a59da881-ff0b-42d1-9b76-453de03d6789",
+      "name": "Maria Garcia",
+      "conditions": [
+        "Type 2 diabetes mellitus"
+      ],
+      "medications": [
+        "Metformin 500 MG"
+      ],
+      "providers": [
+        "Dr. Khan (Endocrinologist)",
+        "Dr. Brown (Endocrinologist)",
+        "Dr. Johnson (Care Coordinator)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "a59da881-ff0b-42d1-9b76-453de03d6789",
+        "completeness_score": 97.4,
+        "standard_coding_score": 60.0,
+        "overall_score": 82.5,
+        "missing_required_fields": 1,
+        "non_standard_codeable_fields": 2,
+        "broken_references": 0
+      },
+      "error_count": 3
+    },
+    {
+      "patient_id": "c97a9b34-a23c-4cad-bf99-217790472fa6",
+      "name": "James Brown",
+      "conditions": [
+        "Asthma"
+      ],
+      "medications": [
+        "Lisinopril 10 MG"
+      ],
+      "providers": [
+        "Dr. Ali (Endocrinologist)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "c97a9b34-a23c-4cad-bf99-217790472fa6",
+        "completeness_score": 100.0,
+        "standard_coding_score": 75.0,
+        "overall_score": 90.0,
+        "missing_required_fields": 0,
+        "non_standard_codeable_fields": 1,
+        "broken_references": 0
+      },
+      "error_count": 1
+    },
+    {
+      "patient_id": "1c29782c-4937-4624-8ab5-7cefc8a2dd13",
+      "name": "Wei Smith",
+      "conditions": [
+        "Chronic obstructive pulmonary disease"
+      ],
+      "medications": [
+        "Atorvastatin 20 MG",
+        "Albuterol 90 MCG inhaler"
+      ],
+      "providers": [
+        "Dr. Johnson (Cardiologist)",
+        "Dr. Davis (Cardiologist)",
+        "Dr. Rossi (Primary Care Physician)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "1c29782c-4937-4624-8ab5-7cefc8a2dd13",
+        "completeness_score": 100.0,
+        "standard_coding_score": 83.3,
+        "overall_score": 93.3,
+        "missing_required_fields": 0,
+        "non_standard_codeable_fields": 1,
+        "broken_references": 0
+      },
+      "error_count": 1
+    },
+    {
+      "patient_id": "d0144a40-03c9-426d-9ea7-bca01eaf1653",
+      "name": "Maria Smith",
+      "conditions": [
+        "Asthma",
+        "Heart failure"
+      ],
+      "medications": [
+        "Atorvastatin 20 MG",
+        "Metformin 500 MG",
+        "Atorvastatin 20 MG"
+      ],
+      "providers": [
+        "Dr. Garcia (Primary Care Physician)",
+        "Dr. Rossi (Pharmacist)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "d0144a40-03c9-426d-9ea7-bca01eaf1653",
+        "completeness_score": 100.0,
+        "standard_coding_score": 77.8,
+        "overall_score": 91.1,
+        "missing_required_fields": 0,
+        "non_standard_codeable_fields": 2,
+        "broken_references": 0
+      },
+      "error_count": 2
+    },
+    {
+      "patient_id": "5e8d3dc1-9e78-4bf1-9acf-1ff996f2f7d6",
+      "name": "Grace Rossi",
+      "conditions": [
+        "Heart failure",
+        "Asthma"
+      ],
+      "medications": [
+        "Atorvastatin 20 MG",
+        "Lisinopril 10 MG",
+        "Lisinopril 10 MG"
+      ],
+      "providers": [
+        "Dr. Nguyen (Cardiologist)",
+        "Dr. Johnson (Pharmacist)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "5e8d3dc1-9e78-4bf1-9acf-1ff996f2f7d6",
+        "completeness_score": 96.4,
+        "standard_coding_score": 50.0,
+        "overall_score": 77.9,
+        "missing_required_fields": 2,
+        "non_standard_codeable_fields": 4,
+        "broken_references": 1
+      },
+      "error_count": 7
+    },
+    {
+      "patient_id": "e0c82758-6fd3-4567-89ae-6b1f2c7f0ea8",
+      "name": "Elena Patel",
+      "conditions": [
+        "Type 2 diabetes mellitus"
+      ],
+      "medications": [
+        "Albuterol 90 MCG inhaler"
+      ],
+      "providers": [
+        "Dr. Khan (Pharmacist)",
+        "Dr. Patel (Care Coordinator)",
+        "Dr. Khan (Care Coordinator)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "e0c82758-6fd3-4567-89ae-6b1f2c7f0ea8",
+        "completeness_score": 97.1,
+        "standard_coding_score": 50.0,
+        "overall_score": 78.2,
+        "missing_required_fields": 1,
+        "non_standard_codeable_fields": 2,
+        "broken_references": 0
+      },
+      "error_count": 3
+    },
+    {
+      "patient_id": "9d8a8b05-d3c1-453b-874f-a0fb0a891f70",
+      "name": "Elena Brown",
+      "conditions": [
+        "Chronic obstructive pulmonary disease",
+        "Hypertension"
+      ],
+      "medications": [
+        "Albuterol 90 MCG inhaler"
+      ],
+      "providers": [
+        "Dr. Rossi (Pharmacist)",
+        "Dr. Patel (Pharmacist)",
+        "Dr. Davis (Cardiologist)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "9d8a8b05-d3c1-453b-874f-a0fb0a891f70",
+        "completeness_score": 97.7,
+        "standard_coding_score": 33.3,
+        "overall_score": 72.0,
+        "missing_required_fields": 1,
+        "non_standard_codeable_fields": 4,
+        "broken_references": 0
+      },
+      "error_count": 5
+    },
+    {
+      "patient_id": "f54c0993-e0ca-450f-8a52-d09e76bde9ff",
+      "name": "Carlos Rossi",
+      "conditions": [
+        "Heart failure"
+      ],
+      "medications": [
+        "Lisinopril 10 MG",
+        "Atorvastatin 20 MG",
+        "Metformin 500 MG"
+      ],
+      "providers": [
+        "Dr. Rossi (Care Coordinator)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "f54c0993-e0ca-450f-8a52-d09e76bde9ff",
+        "completeness_score": 100.0,
+        "standard_coding_score": 83.3,
+        "overall_score": 93.3,
+        "missing_required_fields": 0,
+        "non_standard_codeable_fields": 1,
+        "broken_references": 0
+      },
+      "error_count": 1
+    },
+    {
+      "patient_id": "196f29b1-7389-459e-b6a8-249ae226e539",
+      "name": "Grace Rossi",
+      "conditions": [
+        "Type 2 diabetes mellitus"
+      ],
+      "medications": [
+        "Atorvastatin 20 MG",
+        "Albuterol 90 MCG inhaler"
+      ],
+      "providers": [
+        "Dr. Smith (Pharmacist)",
+        "Dr. Nguyen (Care Coordinator)",
+        "Dr. Kim (Pharmacist)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "196f29b1-7389-459e-b6a8-249ae226e539",
+        "completeness_score": 97.5,
+        "standard_coding_score": 40.0,
+        "overall_score": 74.5,
+        "missing_required_fields": 1,
+        "non_standard_codeable_fields": 3,
+        "broken_references": 0
+      },
+      "error_count": 4
+    },
+    {
+      "patient_id": "e6bb7c5d-67d7-4cfb-a61a-ebcafb9af833",
+      "name": "James Brown",
+      "conditions": [
+        "Hypertension"
+      ],
+      "medications": [
+        "Albuterol 90 MCG inhaler",
+        "Lisinopril 10 MG"
+      ],
+      "providers": [
+        "Dr. Smith (Primary Care Physician)",
+        "Dr. Khan (Cardiologist)",
+        "Dr. Nguyen (Primary Care Physician)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "e6bb7c5d-67d7-4cfb-a61a-ebcafb9af833",
+        "completeness_score": 98.0,
+        "standard_coding_score": 71.4,
+        "overall_score": 87.4,
+        "missing_required_fields": 1,
+        "non_standard_codeable_fields": 2,
+        "broken_references": 2
+      },
+      "error_count": 5
+    },
+    {
+      "patient_id": "a2f0adf9-3e31-4e9b-b0b8-6725cb409b77",
+      "name": "Maria Khan",
+      "conditions": [
+        "Type 2 diabetes mellitus",
+        "Chronic obstructive pulmonary disease"
+      ],
+      "medications": [
+        "Albuterol 90 MCG inhaler",
+        "Atorvastatin 20 MG",
+        "Lisinopril 10 MG"
+      ],
+      "providers": [
+        "Dr. Ali (Primary Care Physician)",
+        "Dr. Rossi (Pharmacist)",
+        "Dr. Garcia (Endocrinologist)"
+      ],
+      "activities": [],
+      "score": {
+        "patient_id": "a2f0adf9-3e31-4e9b-b0b8-6725cb409b77",
+        "completeness_score": 98.2,
+        "standard_coding_score": 75.0,
+        "overall_score": 88.9,
+        "missing_required_fields": 1,
+        "non_standard_codeable_fields": 2,
+        "broken_references": 0
+      },
+      "error_count": 3
+    },
+    {
+      "patient_id": "61610809-ae17-4ea2-85ea-bdc3579efd5d",
+      "name": "Elena Patel",
+      "conditions": [
+        "Asthma",
+        "Heart failure"
+      ],
+      "medications": [
+        "Albuterol 90 MCG inhaler",
+        "Metformin 500 MG",
+        "Lisinopril 10 MG"
+      ],
+      "providers": [
+        "Dr. Khan (Care Coordinator)"
+      ],
+      "activities": [],
+      "score": {
+        "patient_id": "61610809-ae17-4ea2-85ea-bdc3579efd5d",
+        "completeness_score": 96.4,
+        "standard_coding_score": 62.5,
+        "overall_score": 82.9,
+        "missing_required_fields": 2,
+        "non_standard_codeable_fields": 3,
+        "broken_references": 0
+      },
+      "error_count": 5
+    },
+    {
+      "patient_id": "a714a4d7-04cb-4f95-8ff4-d8798e763e6d",
+      "name": "David Brown",
+      "conditions": [
+        "Type 2 diabetes mellitus"
+      ],
+      "medications": [
+        "Atorvastatin 20 MG",
+        "Lisinopril 10 MG",
+        "Atorvastatin 20 MG"
+      ],
+      "providers": [
+        "Dr. Ali (Endocrinologist)",
+        "Dr. Johnson (Care Coordinator)",
+        "Dr. Johnson (Endocrinologist)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "a714a4d7-04cb-4f95-8ff4-d8798e763e6d",
+        "completeness_score": 98.0,
+        "standard_coding_score": 42.9,
+        "overall_score": 76.0,
+        "missing_required_fields": 1,
+        "non_standard_codeable_fields": 4,
+        "broken_references": 0
+      },
+      "error_count": 5
+    },
+    {
+      "patient_id": "67002897-06f7-4d0c-a623-7208f84037d4",
+      "name": "James Smith",
+      "conditions": [
+        "Chronic obstructive pulmonary disease",
+        "Hypertension"
+      ],
+      "medications": [
+        "Metformin 500 MG",
+        "Metformin 500 MG"
+      ],
+      "providers": [
+        "Dr. Smith (Primary Care Physician)",
+        "Dr. Johnson (Pharmacist)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "67002897-06f7-4d0c-a623-7208f84037d4",
+        "completeness_score": 100.0,
+        "standard_coding_score": 57.1,
+        "overall_score": 82.9,
+        "missing_required_fields": 0,
+        "non_standard_codeable_fields": 3,
+        "broken_references": 0
+      },
+      "error_count": 3
+    },
+    {
+      "patient_id": "bd2e0699-260e-417c-adf7-dd83cc5043fb",
+      "name": "Fatima Nguyen",
+      "conditions": [
+        "Heart failure"
+      ],
+      "medications": [
+        "Metformin 500 MG"
+      ],
+      "providers": [
+        "Dr. Rossi (Pharmacist)",
+        "Dr. Nguyen (Endocrinologist)"
+      ],
+      "activities": [
+        "Follow up visit in 3 months",
+        "Home blood pressure monitoring"
+      ],
+      "score": {
+        "patient_id": "bd2e0699-260e-417c-adf7-dd83cc5043fb",
+        "completeness_score": 97.1,
+        "standard_coding_score": 75.0,
+        "overall_score": 88.2,
+        "missing_required_fields": 1,
+        "non_standard_codeable_fields": 1,
+        "broken_references": 0
+      },
+      "error_count": 2
+    }
+  ]
+}
