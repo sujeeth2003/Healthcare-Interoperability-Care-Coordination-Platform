@@ -66,3 +66,11 @@ RxNorm
 
 Checks that every `subject.reference` points to an existing patient.
 
+## Scoring
+
+-   **Completeness Score** = Required fields present ÷ Required fields
+    total
+-   **Standard Coding Score** = Standard coded fields ÷ Total coded
+    fields
+-   **Overall Score** = 0.6 × Completeness + 0.4 × Standard Coding
+
