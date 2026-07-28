@@ -74,3 +74,16 @@ Checks that every `subject.reference` points to an existing patient.
     fields
 -   **Overall Score** = 0.6 × Completeness + 0.4 × Standard Coding
 
+## Running
+
+``` bash
+python main.py
+```
+
+Outputs:
+
+-   `validation_report.json`
+-   `dashboard.html`
+
+Open `dashboard.html` in any web browser.
+
