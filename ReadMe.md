@@ -17,7 +17,7 @@ interoperability metrics, and generates a standalone HTML dashboard.
 ## Project Structure
 
 ``` text
-healthcare-fhir-interoperability/
+Healthcare-Interoperability-Care-Coordination-Platform/
 │
 ├── synthetic_data.py
 ├── fhir_validator.py
