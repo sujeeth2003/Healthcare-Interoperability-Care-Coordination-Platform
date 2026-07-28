@@ -43,3 +43,11 @@ Interoperability Scoring
 HTML Dashboard + JSON Report
 ```
 
+## Supported Resources
+
+-   Patient
+-   Condition
+-   Observation
+-   MedicationRequest
+-   CarePlan
+
