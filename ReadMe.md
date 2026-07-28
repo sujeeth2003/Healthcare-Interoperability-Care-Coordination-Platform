@@ -57,3 +57,12 @@ HTML Dashboard + JSON Report
 
 Ensures mandatory FHIR R4 fields exist for every resource.
 
+### Standard Terminology
+
+Verifies coded elements use standard systems: - LOINC - SNOMED CT -
+RxNorm
+
+### Reference Integrity
+
+Checks that every `subject.reference` points to an existing patient.
+
