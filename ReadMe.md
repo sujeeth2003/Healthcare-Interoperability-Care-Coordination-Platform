@@ -28,3 +28,18 @@ healthcare-fhir-interoperability/
 └── README.md
 ```
 
+## Validation Pipeline
+
+``` text
+Synthetic FHIR Dataset
+        │
+        ▼
+FHIR Validation Engine
+        │
+        ▼
+Interoperability Scoring
+        │
+        ▼
+HTML Dashboard + JSON Report
+```
+
