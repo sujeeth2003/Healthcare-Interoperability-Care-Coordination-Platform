@@ -14,3 +14,17 @@ interoperability metrics, and generates a standalone HTML dashboard.
 -   Generate an interactive HTML dashboard
 -   Export a JSON validation report
 
+## Project Structure
+
+``` text
+healthcare-fhir-interoperability/
+│
+├── synthetic_data.py
+├── fhir_validator.py
+├── interop_score.py
+├── main.py
+├── dashboard.html
+├── validation_report.json
+└── README.md
+```
+
