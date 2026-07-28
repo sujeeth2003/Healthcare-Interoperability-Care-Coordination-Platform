@@ -96,3 +96,14 @@ Open `dashboard.html` in any web browser.
 -   JavaScript
 -   Chart.js
 
+## Future Improvements
+
+-   Additional FHIR resources
+-   Official FHIR profile validation
+-   FastAPI REST API
+-   Docker support
+-   Database integration
+
+## License
+
+MIT License
