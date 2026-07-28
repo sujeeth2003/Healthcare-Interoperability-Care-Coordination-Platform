@@ -51,3 +51,9 @@ HTML Dashboard + JSON Report
 -   MedicationRequest
 -   CarePlan
 
+## Validation Checks
+
+### Required Fields
+
+Ensures mandatory FHIR R4 fields exist for every resource.
+
