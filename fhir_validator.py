@@ -14,3 +14,21 @@ This module does not guess or use heuristics. It checks explicit rules
 taken from the FHIR R4 specification.
 """
 
+STANDARD_CODE_SYSTEMS = {
+    "http://loinc.org",
+    "https://www.snomed.org/about-us",
+    "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "http://terminology.hl7.org/CodeSystem/condition-clinical",
+    "http://hl7.org/fhir/us/core/CodeSystem/careplan-category",
+}
+
+REQUIRED_FIELDS = {
+    "Patient": ["resourceType", "id", "identifier", "name", "gender", "birthDate"],
+    "Condition": ["resourceType", "id", "subject", "clinicalStatus", "code"],
+    "Observation": ["resourceType", "id", "status", "code", "subject"],
+    "MedicationRequest": ["resourceType", "id", "status", "intent",
+                           "medicationCodeableConcept", "subject"],
+    "CarePlan": ["resourceType", "id", "status", "intent", "subject",
+                 "category", "activity"],
+}
+
