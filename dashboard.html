@@ -74,3 +74,24 @@ summaryGrid.innerHTML = cards.map(c =>
   `<div class="card"><div class="value">${c[1]}</div><div class="label">${c[0]}</div></div>`
 ).join("");
 
+// --- Chart 1: overall score per patient ---
+const ctx1 = document.getElementById("scoreChart").getContext("2d");
+new Chart(ctx1, {
+  type: "bar",
+  data: {
+    labels: report.patients.map(p => p.name.trim().slice(0, 14)),
+    datasets: [{
+      label: "Overall interoperability score",
+      data: report.patients.map(p => p.score.overall_score),
+      backgroundColor: report.patients.map(p =>
+        p.score.overall_score >= 85 ? "#2da44e" : p.score.overall_score >= 60 ? "#bf8700" : "#cf222e"
+      )
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { title: { display: true, text: "Overall Interoperability Score per Patient" } },
+    scales: { y: { beginAtZero: true, max: 100 } }
+  }
+});
+
