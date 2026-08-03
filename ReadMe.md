@@ -87,3 +87,12 @@ Outputs:
 
 Open `dashboard.html` in any web browser.
 
+## Technologies
+
+-   Python 3
+-   FHIR R4
+-   JSON
+-   HTML
+-   JavaScript
+-   Chart.js
+
