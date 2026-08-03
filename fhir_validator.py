@@ -102,3 +102,19 @@ def validate_resource(resource, valid_patient_ids):
         "reference_problems": check_reference_integrity(resource, valid_patient_ids),
     }
 
+
+def validate_bundle(bundle, valid_patient_ids):
+    """
+    Validates every resource inside one patient bundle
+    (patient, conditions, observations, medications, care_plan).
+    Returns a flat list of validation result dicts.
+    """
+    results = [validate_resource(bundle["patient"], valid_patient_ids)]
+    for c in bundle["conditions"]:
+        results.append(validate_resource(c, valid_patient_ids))
+    for o in bundle["observations"]:
+        results.append(validate_resource(o, valid_patient_ids))
+    for m in bundle["medications"]:
+        results.append(validate_resource(m, valid_patient_ids))
+    results.append(validate_resource(bundle["care_plan"], valid_patient_ids))
+    return results
