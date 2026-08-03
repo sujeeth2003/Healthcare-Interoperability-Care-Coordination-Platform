@@ -40,3 +40,10 @@ CODEABLE_FIELD = {
 }
 
 
+def check_required_fields(resource):
+    """Returns a list of missing required field names for this resource."""
+    rtype = resource.get("resourceType")
+    required = REQUIRED_FIELDS.get(rtype, [])
+    return [f for f in required if f not in resource]
+
+
