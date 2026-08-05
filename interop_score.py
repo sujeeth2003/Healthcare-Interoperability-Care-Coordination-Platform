@@ -12,3 +12,12 @@ Two components, each 0-100:
 
 overall_score = 0.6 * completeness_score + 0.4 * standard_coding_score
 
+Weighting rationale: a resource missing a required field cannot be
+processed by a receiving system at all (hard failure), while a
+non-standard code can sometimes still be read by a human or mapped later
+(softer failure). 60/40 reflects that difference in severity.
+"""
+
+from fhir_validator import REQUIRED_FIELDS, CODEABLE_FIELD
+
+
