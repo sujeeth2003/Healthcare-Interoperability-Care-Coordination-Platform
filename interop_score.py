@@ -38,3 +38,20 @@ def score_bundle(bundle, validation_results):
         total_required_fields += len(REQUIRED_FIELDS.get(rtype, []))
         missing_required_fields += len(result["missing_fields"])
 
+        if rtype in CODEABLE_FIELD:
+            total_codeable_fields += 1
+            if result["coding_problems"]:
+                non_standard_codeable_fields += 1
+
+        broken_references += len(result["reference_problems"])
+
+    completeness_score = (
+        100.0 * (total_required_fields - missing_required_fields) / total_required_fields
+        if total_required_fields else 100.0
+    )
+    standard_coding_score = (
+        100.0 * (total_codeable_fields - non_standard_codeable_fields) / total_codeable_fields
+        if total_codeable_fields else 100.0
+    )
+    overall_score = 0.6 * completeness_score + 0.4 * standard_coding_score
+
