@@ -55,3 +55,14 @@ def score_bundle(bundle, validation_results):
     )
     overall_score = 0.6 * completeness_score + 0.4 * standard_coding_score
 
+    return {
+        "patient_id": bundle["patient"].get("id"),
+        "completeness_score": round(completeness_score, 1),
+        "standard_coding_score": round(standard_coding_score, 1),
+        "overall_score": round(overall_score, 1),
+        "missing_required_fields": missing_required_fields,
+        "non_standard_codeable_fields": non_standard_codeable_fields,
+        "broken_references": broken_references,
+    }
+
+
