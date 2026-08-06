@@ -66,3 +66,24 @@ def score_bundle(bundle, validation_results):
     }
 
 
+def score_dataset(bundles, all_validation_results):
+    """
+    all_validation_results: list (one entry per patient) of lists of
+    validation result dicts, aligned with `bundles`.
+    Returns per-patient scores plus dataset-wide averages.
+    """
+    per_patient = [
+        score_bundle(bundle, results)
+        for bundle, results in zip(bundles, all_validation_results)
+    ]
+    n = len(per_patient) or 1
+    dataset_summary = {
+        "avg_completeness_score": round(sum(p["completeness_score"] for p in per_patient) / n, 1),
+        "avg_standard_coding_score": round(sum(p["standard_coding_score"] for p in per_patient) / n, 1),
+        "avg_overall_score": round(sum(p["overall_score"] for p in per_patient) / n, 1),
+        "total_missing_fields": sum(p["missing_required_fields"] for p in per_patient),
+        "total_non_standard_codings": sum(p["non_standard_codeable_fields"] for p in per_patient),
+        "total_broken_references": sum(p["broken_references"] for p in per_patient),
+        "patient_count": len(per_patient),
+    }
+    return per_patient, dataset_summary
