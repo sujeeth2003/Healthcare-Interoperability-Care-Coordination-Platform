@@ -43,3 +43,19 @@ def build_report(num_patients=25):
         providers = bundle["care_plan"].get("careTeam", [])
         activities = [a["detail"]["description"] for a in bundle["care_plan"].get("activity", [])]
 
+        error_count = sum(
+            len(r["missing_fields"]) + len(r["coding_problems"]) + len(r["reference_problems"])
+            for r in results
+        )
+
+        display_rows.append({
+            "patient_id": patient.get("id", "(missing id)"),
+            "name": full_name,
+            "conditions": condition_names,
+            "medications": medication_names,
+            "providers": [f"{p['name']} ({p['role']})" for p in providers],
+            "activities": activities,
+            "score": score,
+            "error_count": error_count,
+        })
+
