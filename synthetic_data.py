@@ -116,3 +116,19 @@ def make_observation(patient_id):
             resource["subject"] = {"reference": f"Patient/{uuid.uuid4()}"}  # points to nobody
     return resource
 
+
+def make_medication_request(patient_id):
+    code, display = random.choice(RXNORM_MEDICATIONS)
+    resource = {
+        "resourceType": "MedicationRequest",
+        "id": str(uuid.uuid4()),
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {"coding": [{"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                                                    "code": code, "display": display}]},
+        "subject": {"reference": f"Patient/{patient_id}"},
+    }
+    if random.random() < DEFECT_RATE:
+        resource["medicationCodeableConcept"] = {"text": display}
+    return resource
+
