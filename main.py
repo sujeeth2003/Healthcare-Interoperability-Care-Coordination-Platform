@@ -183,3 +183,20 @@ new Chart(ctx2, {
   }
 });
 
+// --- Patient table ---
+const tbody = document.querySelector("#patientTable tbody");
+tbody.innerHTML = report.patients.map(p => `
+  <tr>
+    <td><strong>${p.name}</strong><br><span style="color:#5b6572;font-size:11px;">${p.patient_id}</span></td>
+    <td>${p.conditions.map(c => `<span class="tag">${c}</span>`).join("") || "—"}</td>
+    <td>${p.medications.map(m => `<span class="tag">${m}</span>`).join("") || "—"}</td>
+    <td>${p.providers.join("<br>") || "—"}</td>
+    <td>${p.activities.join("<br>") || "—"}</td>
+    <td class="${scoreClass(p.score.completeness_score)}">${p.score.completeness_score}%</td>
+    <td class="${scoreClass(p.score.standard_coding_score)}">${p.score.standard_coding_score}%</td>
+    <td class="${scoreClass(p.score.overall_score)}">${p.score.overall_score}%</td>
+    <td>${p.error_count}</td>
+  </tr>
+`).join("");
+</script>
+
