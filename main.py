@@ -200,3 +200,17 @@ tbody.innerHTML = report.patients.map(p => `
 `).join("");
 </script>
 
+</body>
+</html>
+"""
+    html = html.replace("__DATA_JSON__", data_json)
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(html)
+
+
+if __name__ == "__main__":
+    report = build_report(num_patients=25)
+
+    with open("validation_report.json", "w", encoding="utf-8") as f:
+        json.dump(report, f, indent=2)
+
