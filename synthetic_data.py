@@ -151,3 +151,19 @@ def make_care_plan(patient_id, providers):
         del resource[field_to_drop]
     return resource
 
+
+def generate_dataset(num_patients=25):
+    """
+    Returns a list of 'patient bundles': one dict per patient containing
+    the Patient resource plus their linked Condition/Observation/
+    MedicationRequest/CarePlan resources.
+    """
+    bundles = []
+    for _ in range(num_patients):
+        patient = make_patient()
+        pid = patient["id"]
+
+        providers = [{"role": random.choice(PROVIDER_ROLES),
+                      "name": f"Dr. {random.choice(LAST_NAMES)}"}
+                     for _ in range(random.randint(1, 3))]
+
