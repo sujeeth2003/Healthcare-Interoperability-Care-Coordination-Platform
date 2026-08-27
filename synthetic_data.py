@@ -167,3 +167,12 @@ def generate_dataset(num_patients=25):
                       "name": f"Dr. {random.choice(LAST_NAMES)}"}
                      for _ in range(random.randint(1, 3))]
 
+        bundle = {
+            "patient": patient,
+            "conditions": [make_condition(pid) for _ in range(random.randint(1, 2))],
+            "observations": [make_observation(pid) for _ in range(random.randint(2, 4))],
+            "medications": [make_medication_request(pid) for _ in range(random.randint(1, 3))],
+            "care_plan": make_care_plan(pid, providers),
+        }
+        bundles.append(bundle)
+    return bundles
