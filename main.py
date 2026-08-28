@@ -214,3 +214,8 @@ if __name__ == "__main__":
     with open("validation_report.json", "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2)
 
+    render_dashboard(report, output_path="dashboard.html")
+
+    print("Done.")
+    print("Dataset average overall interoperability score:", report["dataset_summary"]["avg_overall_score"], "%")
+    print("Files written: validation_report.json, dashboard.html")
